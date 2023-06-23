@@ -1,4 +1,4 @@
-# Portifólio Java# :open_file_folder:
+# Portifólio Java # :open_file_folder:
 
 Este repositório foi utilizado para armazenar os projetos de Java# desenvolvidos durante o curso da _[Trybe](https://www.betrybe.com/)_.
 Os códigos são autorais.<br>
