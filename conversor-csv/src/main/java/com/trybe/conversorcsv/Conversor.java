@@ -22,10 +22,14 @@ public class Conversor {
    * @throws IOException Caso ocorra algum problema ao ler os arquivos de entrada ou
    *                     gravar os arquivos de saída.
    */
-  public static void main(String[] args) throws IOException {
-    File pastaDeEntradas = new File("./entradas/");
-    File pastaDeSaidas = new File("./saidas/");
-    new Conversor().converterPasta(pastaDeEntradas, pastaDeSaidas);
+  public static void main(String[] args) throws NullPointerException {
+    try{
+      File pastaDeEntradas = new File("./entradas/");
+      File pastaDeSaidas = new File("./saidas/");
+      new Conversor().converterPasta(pastaDeEntradas, pastaDeSaidas);
+    }catch (NullPointerException e){
+      System.out.println(e.getMessage());
+    }
   }
 
   /**
@@ -74,7 +78,7 @@ public class Conversor {
           }
         }
       }
-    } catch (IOException e) {
+    } catch (IOException | NullPointerException e) {
       System.out.println("Ocorreu um erro ao ler o arquivo: " + e.getMessage());
     } finally {
       closeFile(bufferedReader, bufferedWriter);
