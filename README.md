@@ -10,7 +10,7 @@ Os códigos são autorais.<br>
   **link do projeto:**<br>
 https://github.com/tamireshc/java/tree/master/sistema-de-votacao <br>
 
-:star: 2. **Conversos CSV** <br>
+:star: 2. **Conversor de CSV** <br>
 >Projeto que converte os dados de arquivos CSV com formatos inadequados para os formatos requeridos<br>
 ### Exemplo
 
