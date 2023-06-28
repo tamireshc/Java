@@ -23,11 +23,11 @@ public class Conversor {
    *                     gravar os arquivos de saída.
    */
   public static void main(String[] args) throws NullPointerException {
-    try{
+    try {
       File pastaDeEntradas = new File("./entradas/");
       File pastaDeSaidas = new File("./saidas/");
       new Conversor().converterPasta(pastaDeEntradas, pastaDeSaidas);
-    }catch (NullPointerException e){
+    } catch (NullPointerException e) {
       System.out.println(e.getMessage());
     }
   }
@@ -41,6 +41,8 @@ public class Conversor {
    *                        requerido pelo subsistema.
    */
   public void converterPasta(File pastaDeEntradas, File pastaDeSaidas) {
+    FileReader fileReader = null;
+    FileWriter fileWriter = null;
     BufferedWriter bufferedWriter = null;
     BufferedReader bufferedReader = null;
     String linha;
@@ -51,21 +53,23 @@ public class Conversor {
 
     try {
       for (File file : Objects.requireNonNull(pastaDeEntradas.listFiles())) {
-        bufferedReader = new BufferedReader(new FileReader(file));
-        bufferedWriter = new BufferedWriter(new FileWriter(pastaDeSaidas + "/" + file.getName()));
+        fileReader = new FileReader(file);
+        fileWriter = new FileWriter(pastaDeSaidas + "/" + file.getName());
+        bufferedReader = new BufferedReader(fileReader);
+        bufferedWriter = new BufferedWriter(fileWriter);
 
         while ((linha = bufferedReader.readLine()) != null) {
           String[] itemLinha = linha.split(",");
           if (!itemLinha[0].equals("Nome completo")
-              && !itemLinha[1].equals("Data de nascimento")
-              && !itemLinha[2].equals("Email")
-              && !itemLinha[3].equals("CPF")) {
+            && !itemLinha[1].equals("Data de nascimento")
+            && !itemLinha[2].equals("Email")
+            && !itemLinha[3].equals("CPF")) {
             bufferedWriter.write(itemLinha[0].toUpperCase() + ",");
             bufferedWriter.write(formatadorData(itemLinha[1]) + ",");
             bufferedWriter.write(itemLinha[2] + ",");
             bufferedWriter.write(itemLinha[3].substring(0, 3) + "."
-                + itemLinha[3].substring(3, 6) + "." + itemLinha[3].substring(6, 9)
-                + "-" + itemLinha[3].substring(9, 11));
+              + itemLinha[3].substring(3, 6) + "." + itemLinha[3].substring(6, 9)
+              + "-" + itemLinha[3].substring(9, 11));
             bufferedWriter.flush();
             bufferedWriter.newLine();
           } else {
@@ -81,7 +85,7 @@ public class Conversor {
     } catch (IOException | NullPointerException e) {
       System.out.println("Ocorreu um erro ao ler o arquivo: " + e.getMessage());
     } finally {
-      closeFile(bufferedReader, bufferedWriter);
+      closeFile(fileReader, fileWriter, bufferedReader, bufferedWriter);
     }
   }
 
@@ -108,8 +112,11 @@ public class Conversor {
    * Método para fechar arquivos abertos.
    */
 
-  private void closeFile(BufferedReader bufferedReader, BufferedWriter bufferedWriter) {
+  private void closeFile
+  (FileReader fileReader, FileWriter fileWriter, BufferedReader bufferedReader, BufferedWriter bufferedWriter) {
     try {
+      fileReader.close();
+      fileWriter.close();
       bufferedReader.close();
       bufferedWriter.close();
     } catch (Exception e) {
