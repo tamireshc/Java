@@ -1,4 +1,4 @@
-## Projeto Sistema de Votação
+## Projeto Sistema de Votação :bookmark:
 
 >Aplicaçao de Console que implementa um sistema de votação para uma eleição.<br>
 >É possível realizar as seguintes operações: Criar candidato, criar eleitor e executar a votação.
