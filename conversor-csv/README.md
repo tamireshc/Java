@@ -1,4 +1,4 @@
-# **Conversor de CSV** <br>
+# **Conversor de CSV** :paperclip: <br>
 >Projeto que converte os dados de arquivos CSV com formatos inadequados para os formatos requeridos<br>
 ### Exemplo
 
