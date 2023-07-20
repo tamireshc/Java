@@ -1,0 +1,27 @@
+# Configurações do servidor e da aplicação
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# Configurações do banco de dados H2
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb  # URL do banco de dados H2 em memória
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+
+# Configurações de logging
+logging:
+  level:
+    root: INFO
+    com.example: DEBUG
