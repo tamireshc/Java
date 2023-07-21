@@ -17,7 +17,15 @@ Os códigos são autorais.<br>
   **link do projeto:**<br>
 https://github.com/tamireshc/minhas-series <br>
 
-:star: 2. **Sistema de votação** <br>
+:star: 2. **Cadastro de Especialidades** <br>
+>API REST para a gestão de funcionário de um aempresa.  <br>
+>É possível  consultar, cadastrar, editar e deletar profissionais e suas especialidades no banco de dados.<br>
+❗ As tecnologias utilizadas foram o Java, spring, jpa e JAX-RS.
+
+  **link do projeto:**<br>
+https://github.com/tamireshc/Java/tree/master/cadastro-especialidades-spring-jpa-jax <br>
+
+:star: 3. **Sistema de votação** <br>
 >Aplicaçao de Console que implementa um sistema de votação para uma eleição.  <br>
 >É possível realizar as seguintes operações: Criar candidato, criar eleitor e executar a votação.<br>
 ❗ A tecnologia utilizada foi o Java.
@@ -25,7 +33,7 @@ https://github.com/tamireshc/minhas-series <br>
   **link do projeto:**<br>
 https://github.com/tamireshc/java/tree/master/sistema-de-votacao <br>
 
-:star: 3. **Sistema de caixa eletrônico** <br>
+:star: 4. **Sistema de caixa eletrônico** <br>
 >Aplicaçao de Console que implementa um sistema de caixa eletrônico  <br>
 >É possível realizar as seguintes operações: Mostras extrato, sacar, depositar, transferir e sair do sistema.<br>
 ❗ As tecnologias utilizadas foram: Java e JUnit5.
@@ -33,7 +41,7 @@ https://github.com/tamireshc/java/tree/master/sistema-de-votacao <br>
   **link do projeto:**<br>
 https://github.com/tamireshc/Java/tree/master/caixa-eletronico <br>
 
-:star: 4. **Datacenter** <br>
+:star: 5. **Datacenter** <br>
 >Projeto que configura o ORM Hibernate utilizando tabelas com relações de 1-N e N-N  <br>
 >É possível enviar, atualizar e deletar dados para um banco MySQL por meio da classe App e o método main<br>
 ❗ As tecnologias utilizadas foram: Java, Hibernate e MySQL.
@@ -41,7 +49,7 @@ https://github.com/tamireshc/Java/tree/master/caixa-eletronico <br>
   **link do projeto:**<br>
 https://github.com/tamireshc/Java/tree/master/datacenter-catalogo-ORM-Hibernate <br>
 
-:star: 5. **Simulador de pix - tratamento de erros** <br>
+:star: 6. **Simulador de pix - tratamento de erros** <br>
 >Projeto que simula um sitema de pix que se conecta a um servidor em nuvem.<br>
 >O projeto trata os possíveis erros de validação, indisponibilidade de recursos ou usuário, conexão e erros internos com classes personalizada de erro.<br>
 ❗ A tecnologia utilizada foi o Java.
@@ -49,7 +57,7 @@ https://github.com/tamireshc/Java/tree/master/datacenter-catalogo-ORM-Hibernate 
   **link do projeto:**<br>
 https://github.com/tamireshc/Java/tree/master/simulador-de-pix-tratamento-de-erros <br>
 
-:star: 6. **Conversor de CSV** <br>
+:star: 7. **Conversor de CSV** <br>
 >Projeto que converte os dados de arquivos CSV com formatos inadequados para os formatos requeridos<br>
 ❗ A tecnologia utilizada foi o Java.
 
