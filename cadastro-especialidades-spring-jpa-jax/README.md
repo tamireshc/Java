@@ -1,5 +1,5 @@
 ## Cadastro de Especialidades :clipboard:
->API REST para a gestão de funcionário de um aempresa.  <br>
+>API REST para a gestão de funcionário de um empresa.  <br>
 >É possível  consultar, cadastrar, editar e deletar profissionais e suas especialidades no banco de dados.<br>
 ❗ As tecnologias utilizadas foram o Java, spring, jpa e JAX-RS.
 
